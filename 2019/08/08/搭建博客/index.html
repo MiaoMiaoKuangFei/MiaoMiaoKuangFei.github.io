@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content>
+    <meta name="author" content="Zhutian Lin">
+    <meta name="keywords" content>
+    <title>使用Hexo搭建博客 ~ 寂流川眠</title>
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
+    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_l7tuu6qerl9.css">
+    
+        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+    
+    <link rel="stylesheet" href="/css/main.css">
+
+    
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>寂流川眠</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">首页</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">文章</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">关于</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2" style="background: url('/img/pic3.jpg')no-repeat center center;background-size: cover;">
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+            <br>
+            
+            <p>Thursday, August 8th 2019, 4:47 pm</p>
+            
+        </div>
+        </div>
+    </div>
+    </div>
+  </header>
+
+  <main>
+  
+  <link rel="stylesheet" href="/css/post.css">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-none d-md-block col-md-2"></div>
+        <div class="col-md-8 m-auto board-cntr">
+            <div class="py-5 z-depth-3 board">
+                <div class="post-content markdown-body m-auto">
+                    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我一直想搭一个自己的网站，奈何自己搞个服务器也不是很必要（我们穷鬼是这样的啦），那么用Hexo搭建一个博客，将代码托管到Github就显得很划算了。</p>
+<p>建立这个博客的初衷还是想把自己学过的和实际使用过的技术进行复盘，督促自己不要变成咸鱼，主要是把自己摔过的坑记录下来，除非十分必要，否则过程从略记录。</p>
+<p>要搭建这个博客大概需要以下的几个方面准备：</p>
+<ol>
+<li>有一台电脑。</li>
+<li>安装Hexo。</li>
+<li>Github账号。</li>
+<li>MarkDown编辑博文（感觉MarkDown的语法比Latax简洁很多啊！！！）。</li>
+</ol>
+<h1 id="各种软件的安装"><a href="#各种软件的安装" class="headerlink" title="各种软件的安装"></a>各种软件的安装</h1><h2 id="Node安装"><a href="#Node安装" class="headerlink" title="Node安装"></a>Node安装</h2><p>首先得在官网上把这个<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node</a>下载下来，大概就是无脑下载和安装就可以了（找好路径之后，一直点Next，最后Finish）。</p>
+<h2 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h2><p>下载<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a>也是大概无脑安装就行。下载完成之后去cmd里输入<code>git version</code>，如果出现了它的版本信息那就是没问题了。</p>
+<p>在这个部分中，我始终没搞清楚Git的三个桌面快捷方式到底分别是干啥的，不过好在弄这个博客只用得到<code>Git Bush</code>。</p>
+<h2 id="Hexo的安装"><a href="#Hexo的安装" class="headerlink" title="Hexo的安装"></a>Hexo的安装</h2><p>在桌面的<code>Git Bush</code>中使用下面的命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>然后随意挑选一个自己喜欢的文件夹（最好还是有管理意识），右键<code>Git Bush Here</code>。在里面使用命令：<code>hexo init</code>。这个时候文件夹里会出现一大堆乱七八糟的文件夹，暂时不要管它，先看看默认的效果怎么样。</p>
+<p>在本地的<code>Git Bush</code>使用以下的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>之后在浏览器里（我的是Chrome）访问网址<code>localhost:4000</code>就可以在本地上看到自己的网站了。</p>
+<h1 id="与Github关联"><a href="#与Github关联" class="headerlink" title="与Github关联"></a>与Github关联</h1><h2 id="前期工作"><a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h2><ol>
+<li>首先建立一个Github账户。</li>
+<li>创建一个新的代码库。</li>
+<li>名字要是<code>&lt;Github的用户名&gt;.github.io</code><h2 id="配置SSH密钥"><a href="#配置SSH密钥" class="headerlink" title="配置SSH密钥"></a>配置SSH密钥</h2>我觉得这一块我真的没这么搞懂，但是做大概是做了出来的。</li>
+</ol>
+<p>首先在<code>Git Bush</code>里使用<code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code>命令，里面的那一堆email地址换成自己的（双引号里面的）。</p>
+<p>如果不想该默认存储地址的话，就一路回车，直到出现:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in /c/Users/lenovo/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved in /c/Users/lenovo/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:xxx</span><br></pre></td></tr></table></figure>
+
+<p>先把这些存到一个记事本里，但是似乎并没有什么卵用，当我们点开GitHub的SSH配置里面要复制密钥，如果复制了这个key fingerprint 的话就会报错，说这个密钥是invalid的，其实是要赋值上面说的那个路径下有个.pub文件里的内容，那个文件只要用记事本打开就可以了。</p>
+<p>把里面的内容都复制到SSH设置里的框中，Title随便取即可</p>
+<p>最后在本地<code>Git Bush</code>中输入命令<code>ssh -T git@github.com</code>看是否成功即可。</p>
+<h1 id="将本地博客上传到网上"><a href="#将本地博客上传到网上" class="headerlink" title="将本地博客上传到网上"></a>将本地博客上传到网上</h1><p>包括主题的选择在内的各项内容在参考文献中说的非常清楚，下次再遇到问题可以直接使用里面的过程。</p>
+<p>值得注意的是，我在使用这些内容的时候遇到的一些问题：</p>
+<ol>
+<li>需要在根目录_config.yml文件下修改使用的主题名称，如果仅仅是把主题下载到theme文件夹是不行的。</li>
+<li>source里的_posts文件夹中所有.md文件都是MarkDown语法下的博文文件，要想编辑博客，增加或删改博文的话，就要对这些文件进行编辑，我使用的是VS Code软件配合MarkDown All In One插件使用。</li>
+<li>进入下载的theme里面会还有一个_config.yml，在那个里面编辑的就是各个页面的壁纸或者名称之类的，这些壁纸的主题都要先下载到图片的文件夹里，然后再把路径贴到文件中就行，但是地址要写对，要不然很可能显示不出来。</li>
+<li>最后推到网上去的时候先最好在本地编译过，本地编译的顺序是：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>先输完<code>g sentence</code>之后翻翻执行的命令行，看看有没有错误，如果没有报错再执行<code>hexo s</code>，否则可能出现点不开某些子网页的情况。</p>
+<p>最后再使用<code>$ hexo d -g</code>就可以到网址上了，至于d和g的顺序打反似乎没有什么问题，git命令行的命令我还不是特别熟悉，以后还会深入学习的。</p>
+<h1 id="MarkDown-的初步使用"><a href="#MarkDown-的初步使用" class="headerlink" title="MarkDown 的初步使用"></a>MarkDown 的初步使用</h1><p>MarkDown的语法还是比较多的，但是总体来说并不复杂，今天我主要使用的是：</p>
+<ol>
+<li><p>标题级别使用 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#</span><br><span class="line">##</span><br><span class="line">###</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>代码框的使用</p>
+</li>
+<li><p>网页链接的使用<code>[]()</code></p>
+</li>
+</ol>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>感谢前辈们的博文提供的参考！</p>
+<ol>
+<li><a href="https://juejin.im/entry/5a574864f265da3e3c6c1217" target="_blank" rel="noopener">2018，你该搭建自己的博客了！</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/56943330" target="_blank" rel="noopener">使用vscode开始Markdown写作之旅</a></li>
+</ol>
+
+                    <hr>
+                    <div>
+                        <p>
+                        
+                            <span class="badge badge-light">#&nbsp;计科杂谈</span>
+                            &nbsp;
+                        
+                        </p>
+                    </div>
+                    <br>
+                    
+                        <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="comments" id="comments">
+
+</div>
+  
+  </main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
+  <script src="/lib/mdbootstrap/js/popper.min.js"></script>
+  <script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
+  <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="/lib/tocbot/tocbot.min.js?v=4.7.0"></script>
+    
+    <script src="/js/post.js"></script>
+  
+  
+    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
+    <script>
+      $(document).ready(function(){
+        $('pre').addClass('prettyprint linenums');
+        prettyPrint();
+      })
+    </script>
+  
+  
+    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+          strings: [
+            '  ',
+            "使用Hexo搭建博客&nbsp;",
+        ],
+        cursorChar: "_",
+        typeSpeed: 70,
+        startDelay: 300, //开始之前延迟300毫秒
+        loop: false,
+        });
+        $(".typed-cursor").addClass("h2");
+    </script>
+  
+  
+    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
+    <script>
+      anchors.options = {
+        placement: "right",
+        visible: "false",
+        
+      };
+      anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
+    </script>
+  
+</body>
+</html>
