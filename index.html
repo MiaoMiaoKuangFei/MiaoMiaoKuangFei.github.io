@@ -98,21 +98,59 @@
   
   
     <div class="col-12 col-md-8 m-auto">
+        <a href="/2019/08/09/Merge-Two-Sorted-Lists/">
+            <p class="h4 index-header">Merge Two Sorted Lists</p>
+            <div class="index-excerpt">
+              
+                <div class="index-text mb-1">ProblemMerge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+Example:$$Input: 1→2→4, 1→3→4\Output: 1→1→2→3→4→4$$
+My SolutionThe time complexity is $O(n^2)$,and is not the best solution.
+    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        if(l1==null) return l2;
+        if(l2==null) return l1;
+        ListNode shift=l2;
+        while(shift!=null){
+            l1=MergeNode(l1,shift);
+  </div>
+              
+            </div>
+        </a>
+      
+      
+        <div>
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-09
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          
+              <i class="iconfont icon-cc-tag-more"></i>
+              
+                  LeetCode Problems&nbsp;
+              
+          
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="row mb-4">
+  
+  
+    <div class="col-12 col-md-8 m-auto">
         <a href="/2019/08/09/Remove-Nth-Node-From-End-Of-List/">
             <p class="h4 index-header">Remove Nth Node From End Of List</p>
             <div class="index-excerpt">
               
                 <div class="index-text mb-1">ProblemGiven a linked list, remove the n-th node from the end of list and return its head.
 Example:
-Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.
-
-After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.Note:Given n will always be valid.
+Given linked list: $1→2→3→4→5$, and $n = 2$.
+After removing the second node from the end, the linked list becomes $1→2→3→5$.
+Note:Given n will always be valid.
 Follow up:Could you do this in one pass?
 My Solutionclass Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode shift=head;//Get the first Node
         /**get size*/
-        int size=</div>
+        int size=0;
+        while(shift</div>
               
             </div>
         </a>
