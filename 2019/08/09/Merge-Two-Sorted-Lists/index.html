@@ -14,7 +14,7 @@
 
 
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="UTF-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,14 +31,14 @@
     
         <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
     
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
     
 </head>
 
 
 <body>
-  <header style="height: 70vh;">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
 <div class="container">
     <a class="navbar-brand" href="/"><strong>寂流川眠</strong></a>
@@ -97,10 +97,13 @@
         <div class="col-md-8 m-auto board-cntr">
             <div class="py-5 z-depth-3 board">
                 <div class="post-content markdown-body m-auto">
-                    <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.</p>
-<p><strong>Example:</strong><br>$$<br>Input: 1→2→4, 1→3→4\<br>Output: 1→1→2→3→4→4<br>$$</p>
-<h1 id="My-Solution"><a href="#My-Solution" class="headerlink" title="My Solution"></a>My Solution</h1><p>The time complexity is $O(n^2)$,and is not the best solution.</p>
-<pre><code class="java">    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+                    <p>、</p>
+<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.</p>
+<p><strong>Example:</strong></p>
+<script type="math/tex; mode=display">
+Input: 1→2→4, 1→3→4</script><script type="math/tex; mode=display">
+Output: 1→1→2→3→4→4</script><h1 id="My-Solution"><a href="#My-Solution" class="headerlink" title="My Solution"></a>My Solution</h1><p>The time complexity is $O(n^2)$,and is not the best solution.</p>
+<pre><code class="lang-java">    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if(l1==null) return l2;
         if(l2==null) return l1;
         ListNode shift=l2;
@@ -137,11 +140,12 @@
             }
             return head;
         }
-    }</code></pre>
+    }
+</code></pre>
 <h1 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h1><p>Runtime: 1 ms, faster than <strong>23.31%</strong> of Java online submissions for Merge Two Sorted Lists.</p>
 <p>Memory Usage: 39.8 MB, less than <strong>16.16%</strong> of Java online submissions for Merge Two Sorted Lists.</p>
 <h1 id="Better-Solution"><a href="#Better-Solution" class="headerlink" title="Better Solution"></a>Better Solution</h1><p>The method below has the time complexity of $O(n)$.And this solution use sentinel node as its first node.</p>
-<pre><code class="java"> public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+<pre><code class="lang-java"> public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null &amp;&amp; l2 == null) {
             return null;
         }
@@ -174,7 +178,8 @@
         }
         /**The head node here is a sentinel node,it is dummy, so we should return head.next*/
         return head.next;
-    }</code></pre>
+    }
+</code></pre>
 <p>Source:<a href="https://leetcode.com/problems/merge-two-sorted-lists/discuss/348837/Java-beats-100-0ms-solution" target="_blank" rel="noopener">Java beats 100% 0ms solution</a></p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank" rel="noopener">Merge Two Sorted Lists</a></p>
 
@@ -271,7 +276,7 @@
         
       };
       anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
-    </script>
+    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 </body>
 </html>
